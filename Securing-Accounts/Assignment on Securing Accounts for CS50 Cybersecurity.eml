@@ -1,0 +1,670 @@
+Delivered-To: pogosonkeran@gmail.com
+Received: by 2002:a05:7412:2214:b0:18e:12b0:c0ca with SMTP id r20csp149953rda;
+        Mon, 15 Sep 2025 19:41:06 -0700 (PDT)
+X-Received: by 2002:a05:690c:7691:b0:729:5fe2:3dad with SMTP id 00721157ae682-7371ea76286mr5076637b3.1.1757990466612;
+        Mon, 15 Sep 2025 19:41:06 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1757990466; cv=none;
+        d=google.com; s=arc-20240605;
+        b=CFil6Ye942/7laYBl3l8+nLqsVmqcD6kk/hsNx6FXe6m1xLtrjNgMHabu5jke0ycL8
+         t5o0fOIVoP/WK28npnV/m4Oy1Yl9ckFnvUjsPMUlkNrnVOQtDDN/mKqSsjVD/w5EzkE7
+         xdU+frmzCnaT/GmdHjA/J2wFrlwCLxiqcqcLq0eVyNoxViy2Bv+d2/o15rXbtvBZyb8g
+         BrHABQ55bJ8J8e7tXCl8979LM1ffaUlU40n9SXALH74Cao2AP8hagMXHsK78xD083rOK
+         Q3edAZ3lTpArc19wAUlpaFBqdfDk7jz82n4XWS8V/ryTdE0k3QMLdgnkGC/eRRLMGGfB
+         NOKQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:from:subject:date:message-id:feedback-id:mime-version
+         :dkim-signature;
+        bh=xE97bdoDG/ZtGRgAmo6rjp6O7X9LVD4+Wmmi+Dz5dDU=;
+        fh=enhzzI0YQWCVFbYPrDT3OzCHPjoLO4n7ea1exuEeEeg=;
+        b=GzCGXB4goLyiIo5KIYJjR+NcszBODFdQrMMax/MT/rfFWWpkzYKONRWsyzLNUJI7QL
+         aZdqfLKUdRHOlMy+SqGfzIHmxpm1zqorRBqQFcZ3lVC/lGs55aMl79P3Xw6cCWg/tvo+
+         Ch9yxyAkogfqAh0bTln9inAJyuSWWhdehdXTrHjStNsx5nhGMYEr6x/UTF1t/qg356IS
+         CbG2KAGXvFBtcedBsnKK4mFZcWF1eyRwgalxFD/nrtB365kvmG9IoMkdCZ0J8tpWao7W
+         mKmzezjnB0lw9kb98Z5hqiT552pfLM0JNauSJ49bQ+nEvVUwNxeLWhVIl6nJDk6g0VHx
+         Mw+A==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@google.com header.s=20230601 header.b=dn1UXf2e;
+       spf=pass (google.com: domain of 3qc7iabykae4v4728-7usuy598-347u51ew44w1u.s42@trix.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3Qc7IaBYKAE4v4728-7usuy598-347u51Ew44w1u.s42@trix.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <3Qc7IaBYKAE4v4728-7usuy598-347u51Ew44w1u.s42@trix.bounces.google.com>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id 956f58d0204a3-6247d0b6911sor4109652d50.2.2025.09.15.19.41.06
+        for <pogosonkeran@gmail.com>
+        (Google Transport Security);
+        Mon, 15 Sep 2025 19:41:06 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 3qc7iabykae4v4728-7usuy598-347u51ew44w1u.s42@trix.bounces.google.com designates 209.85.220.69 as permitted sender) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@google.com header.s=20230601 header.b=dn1UXf2e;
+       spf=pass (google.com: domain of 3qc7iabykae4v4728-7usuy598-347u51ew44w1u.s42@trix.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3Qc7IaBYKAE4v4728-7usuy598-347u51Ew44w1u.s42@trix.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20230601; t=1757990466; x=1758595266; dara=google.com;
+        h=to:from:subject:date:message-id:feedback-id:mime-version:from:to:cc
+         :subject:date:message-id:reply-to;
+        bh=xE97bdoDG/ZtGRgAmo6rjp6O7X9LVD4+Wmmi+Dz5dDU=;
+        b=dn1UXf2es5vUXC6YZSPF28Um6lbrr5bab6+qYCH/G/O+8iMoHRg4Mm5ct/bUuh7/pe
+         Y1DKjcLF/tgul+kSQgJvqm+BDLsTtbLZos4lxsqo46o2jSwUcMLC195qQ9P9rEarPGj1
+         XHSDU+W6ph085Tle7gdKIkUEQeyqCaynKhEh2A0aOjWSCz7Abo78igUOSdlN1v3yt6/8
+         yqVBHl5vlDyi4sauM1O9zdAqZk5vQ7/bpLMbJjkKX+kn6cNwzUWJqq3s9qVOb9jqpL2i
+         42VAsOgiXA1T1zcfow5z1TttL1haWi7M+Rd3frMurDnRUdO94WM7hGCdgXVqn30fPOo7
+         Gltw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1757990466; x=1758595266;
+        h=to:from:subject:date:message-id:feedback-id:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=xE97bdoDG/ZtGRgAmo6rjp6O7X9LVD4+Wmmi+Dz5dDU=;
+        b=Df8Tj2s+sFuaEusjYFYifTp29BNoDA9kSubhp+c/fVX3I5dXoLXPxaJwaixZFbcAgm
+         ay4RKY49GpcBGWlh0/uqKlK4ypWT1BiH+CqpCzmk+/kP8ub2krMTOYSaYXdGR1lH/i3A
+         WG8L6WGtsuuyRTkr8mQJAjJCWhGYccht/b+H03odMCyv1wXJVT7TVefoJKoFrd0o7SO6
+         R8mlG4Y/GJtspPjp8Ue2xj4oicpG2NcyyAD3y9OTf1q5VApDSkZ/yjnaY4GPUejiE4xn
+         wfsZ9IeNc0nFaid4lfXWU4S6fPJTsM3FBrxQnYz764iTyIrn52xc7ScxpDdPcZipGiEU
+         0+QA==
+X-Gm-Message-State: AOJu0YwBqKBdZ8Ko8L8FkuC7gxl71HD1/MTnkKHMGAc9+BlIEbunHagm
+	jArrCOC4nsfgRCbn9r/eOuf0XXUdcE7jQRTmdQZ2gQ6BWta1tpqpJEKMXthlQMjgnEHMA+Hbjjz
+	bk2IsUnyX3ctnPNdglE38NEHstIGCYRL9VTytg8A=
+X-Google-Smtp-Source: AGHT+IHNDBOL0CDV34aNZuqlKr96mgrebGhWV2d7qWQZ/fKSw//A96TvKJ3mBwkHaDaf48+yb9ntHDAr4r4LV/zNpdVlwA==
+MIME-Version: 1.0
+X-Received: by 2002:a53:c2ca:0:b0:62f:ce58:62ed with SMTP id
+ 956f58d0204a3-633a32e9e43mr385325d50.18.1757990465910; Mon, 15 Sep 2025
+ 19:41:05 -0700 (PDT)
+Feedback-ID: MailTypeResponseReceipt:GoogleForms
+X-GoogleForms-FormId: e/1FAIpQLSeVGJ6I0hSpb4NqzfbCC8o1IkezdTCw4fpHpMTLX-eR4fsQeg
+X-GoogleForms-CustomerDisplayName: CS50
+Message-ID: <autogen-java-95359de6-3633-4333-bb91-eb4d3a3d2526@google.com>
+Date: Tue, 16 Sep 2025 02:41:05 +0000
+Subject: Assignment on Securing Accounts for CS50 Cybersecurity
+From: Google Forms <forms-receipts-noreply@google.com>
+To: pogosonkeran@gmail.com
+Content-Type: multipart/alternative; boundary="0000000000003d4c1c063ee20deb"
+
+--0000000000003d4c1c063ee20deb
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+Content-Transfer-Encoding: base64
+
+R29vZ2xlIEZvcm1zDQoNCg0KVGhhbmtzIGZvciBmaWxsaW5nIG91dCBBc3NpZ25tZW50IG9uIFNl
+Y3VyaW5nIEFjY291bnRzIGZvciBDUzUwICANCkN5YmVyc2VjdXJpdHkNCkhlcmUncyB3aGF0IHdh
+cyByZWNlaXZlZC4NCg0KDQpBc3NpZ25tZW50IG9uIFNlY3VyaW5nIEFjY291bnRzIGZvciBDUzUw
+IEN5YmVyc2VjdXJpdHkNCg0KQWxsIGFzc2lnbm1lbnRzIGluIENTNTAgQ3liZXJzZWN1cml0eSBh
+cmUgb3V0IG9mIDEwIHBvaW50cy4gQSBzY29yZSBvZiA3ICANCnBvaW50cyBvciBiZXR0ZXIgKDcw
+JSkgaXMgcmVxdWlyZWQgdG8gYmUgY29uc2lkZXJlZCB0byBoYXZlICJwYXNzZWQiIGFuICANCmFz
+c2lnbm1lbnQgaW4gdGhpcyBjb3Vyc2UuIFBsZWFzZSBkbyBub3QgcmVzdWJtaXQgYW4gYXNzaWdu
+bWVudCBpZiB5b3UgaGF2ZSAgDQphbHJlYWR5IG9idGFpbmVkIGEgcGFzc2luZyBzY29yZS0td2Ug
+Y29uc2lkZXIgdGhhdCBzcGFtLCBhbmQgaWYgZGV0ZWN0ZWQsICANCnRoZSBzdWJtaXNzaW9uIHdp
+bGwgYmUgZGVsZXRlZCwgbWVhbmluZyB5b3Ugd2lsbCBub3QgcmVjZWl2ZSB0aGUgc2NvcmUgYmFj
+ayAgDQphbnl3YXkuIFlvdSBkb24ndCByZWNlaXZlIGEgZmluYWwgZ3JhZGUgYXQgdGhlIGVuZCBv
+ZiB0aGUgY291cnNlLCBzbyBpdCAgDQp3aWxsIGhhdmUgbm8gYmVhcmluZyBvbiB5b3VyIGNlcnRp
+ZmljYXRlLCBhbmQgaXQgd2lsbCBvbmx5IHNsb3cgZG93biBvdXIgIA0KZ3JhZGVycyENCg0KDQoN
+ClN1Ym1pdHRpbmcgdGhpcyBhc3NpZ25tZW50IG1vcmUgdGhhbiB0d2ljZSBpbiBhIHNpbmdsZSBn
+cmFkaW5nIGN5Y2xlICANCmNvbnN0aXR1dGVzIHNwYW1taW5nIHRoZSBzdGFmZiwgYXMgd2VsbC4g
+VXBvbiB5b3VyIHRoaXJkIHN1Ym1pc3Npb24sIGFsbCBvZiAgDQp5b3VyIHN1Ym1pc3Npb25zIGZy
+b20gdGhlIGN1cnJlbnQgZ3JhZGluZyBjeWNsZSBhcmUgYXV0b21hdGljYWxseSBkZWxldGVkICAN
+CmZyb20gdGhlIHN5c3RlbS4gWW91IHdpbGwsIHRoZXJlZm9yZSwgbm90IHJlY2VpdmUgYW55IGZl
+ZWRiYWNrIGFuZCB3aWxsICANCm5lZWQgdG8gd2FpdCBhdCBsZWFzdCB0aHJlZSB3ZWVrcyBiZWZv
+cmUgeW91IHN1Ym1pdCBhZ2Fpbi4NCg0KVW5saWtlIENTNTB4LCBhc3NpZ25tZW50cyBpbiB0aGlz
+IGNvdXJzZSBhcmUgZ3JhZGVkIG9uIGEgc2V0IHNjaGVkdWxlLCBhbmQgIA0KZGVwZW5kaW5nIG9u
+IHdoZW4geW91IHN1Ym1pdHRlZCwgaXQgbWF5IHRha2UgdXAgdG8gdGhyZWUgd2Vla3MgZm9yIHlv
+dXIgIA0Kd29yayB0byBiZSBncmFkZWQuIERvIGJlIHBhdGllbnQhIFByb2plY3Qgc2NvcmVzIGFu
+ZCBhc3NpZ25tZW50IHN0YXR1cyBvbiAgDQpjczUwLm1lL2N5YmVyc2VjdXJpdHkgKGVnICJZb3Vy
+IHN1Ym1pc3Npb24gaGFzIGJlZW4gcmVjZWl2ZWQuLi4iKSB3aWxsICANCmxpa2VseSBjaGFuZ2Ug
+b3ZlciB0aW1lIGFuZCBhcmUgbm90IGZpbmFsIHVudGlsIHRoZSBzY29yZXMgaGF2ZSBiZWVuICAN
+CnJlbGVhc2VkLg0KDQoNCkVtYWlsICoNCg0KDQpwb2dvc29ua2VyYW5AZ21haWwuY29tDQoNCg0K
+TmFtZSAqDQoNCg0KT2hpcmVtZW4gUG9nb3Nvbg0KDQoNCmVkWCBVc2VybmFtZSAqDQoNCg0KcG9n
+b3NvbmtlcmFuDQoNCg0KV2hhdCBpcyB5b3VyIEdpdEh1YiB1c2VybmFtZT8gKg0KDQpJZiB5b3Ug
+ZG8gbm90IGFscmVhZHkgaGF2ZSBhIEdpdEh1YiBhY2NvdW50LCB5b3UgY2FuIHNpZ24gdXAgZm9y
+IG9uZSBhdCAgDQpodHRwczovL2dpdGh1Yi5jb20vam9pbi4gWW91IGNhbiB0aGVuIHVzZSB0aGlz
+IGFjY291bnQgdG8gbG9nIGluIHRvICANCmNzNTAubWUvY3liZXJzZWN1cml0eSB0byB0cmFjayB5
+b3VyIHByb2dyZXNzIGluIHRoZSBjb3Vyc2UgKHlvdXIgcHJvZ3Jlc3MgIA0Kd2lsbCBvbmx5IHNo
+b3cgdXAgYWZ0ZXIgeW91IGhhdmUgcmVjZWl2ZWQgYXQgbGVhc3Qgb25lIHNjb3JlIHJlbGVhc2Ug
+ZW1haWwgIA0KZnJvbSBDUzUwIEJvdCwgc28gZG8gYmUgcGF0aWVudCEpLiBEb24ndCB3b3JyeSBh
+Ym91dCBzZWVpbmcgYSAnTm8gIA0KU3VibWlzc2lvbnMnIG1lc3NhZ2Ugb24gc3VibWl0LmNzNTAu
+aW8sIGlmIHlvdSBmaW5kIHRoYXQuIFRoZSBjb3Vyc2UgIA0KY29sbGVjdHMgc3VibWlzc2lvbnMg
+dXNpbmcgR29vZ2xlIEZvcm1zLCBhbmQgb25seSB0aGUgZ3JhZGVib29rIG9uICANCmNzNTAubWUv
+Y3liZXJzZWN1cml0eSBpcyBpbXBvcnRhbnQhDQoNCg0KQmUgY2VydGFpbiB0aGUgdXNlcm5hbWUg
+eW91IHByb3ZpZGUgaXMgY29ycmVjdCEgSWYgeW91IHByb3ZpZGUgdGhlIHdyb25nICANCnVzZXJu
+YW1lLCB5b3Ugd2lsbCBub3QgYmUgYWJsZSB0byBzZWUgeW91ciBzY29yZXMuIFRoaXMgaXMgdGhl
+IG9ubHkgIA0Kb3Bwb3J0dW5pdHkgeW91IHdpbGwgaGF2ZSB0byBwcm92aWRlIHRoZSBjb3JyZWN0
+IHVzZXJuYW1lIGluIHRoaXMgY291cnNlIQ0KWW91ciBHaXRIdWIgdXNlcm5hbWUgc2hvdWxkIG5v
+dCBiZSBjaGFuZ2VkIHdoaWxlIHlvdSBhcmUgdGFraW5nIHRoaXMgIA0KY291cnNlLiBUaGUgY3Vy
+cmVudCBncmFkZWJvb2sgc3lzdGVtIGlzIG5vdCBkZXNpZ25lZCB0byBhY2NvbW1vZGF0ZSBuYW1l
+ICANCmNoYW5nZXMuDQpCZSBzdXJlIHRvIHJlbW92ZSBleHRyYW5lb3VzIGNoYXJhY3RlcnMsIHN1
+Y2ggYXMgYW4gQCBwcmVmaXguIERvIG5vdCBpbnB1dCAgDQphIFVSTCBvciBlbWFpbCBhZGRyZXNz
+LCBqdXN0IHlvdXIgdXNlcm5hbWUuDQoNCg0KcG9nb3NvbmtlcmFuDQoNCg0KQ2l0eSwgU3RhdGUs
+IENvdW50cnkgKg0KDQoNCkNvbHVtYmlhLCBTb3V0aCBDYXJvbGluYSwgVVNBDQoNCg0KQWNrbm93
+bGVkZ2VtZW50ICoNCg0KVW5saWtlIG91ciBjb3Vyc2UgQ1M1MHgsIGdyYWRpbmcgaW4gdGhpcyBj
+b3Vyc2UgaXMgbm90IGRvbmUgYXV0b21hdGljYWxseSwgIA0KYW5kIHRoZXJlIGFyZSBodW1hbiBy
+ZXZpZXdlcnMgZm9yIGVhY2ggYXNzaWdubWVudC4gR3JhZGluZyBtYXksIGRlcGVuZGluZyAgDQpv
+biBleGFjdGx5IHdoZW4gaW4gb3VyIGdyYWRpbmcgY3ljbGUgeW91IHN1Ym1pdCwgdGFrZSB1cCB0
+byB0aHJlZSB3ZWVrcyAgDQpmcm9tIHRoZSB0aW1lIHlvdSBzdWJtaXQuIFlvdXIgZ3JhZGUgc3Rh
+dHVzIG1heSBjaGFuZ2UgaW4geW91ciBncmFkZWJvb2sgYXQgIA0KY3M1MC5tZS9jczUwY3kgaW4g
+dGhlIGludGVyaW0sIGJ1dCBncmFkZXMgYXJlIG5ldmVyIGZpbmFsIHVudGlsIHlvdSByZWNlaXZl
+ICANCmEgc2NvcmUgcmVsZWFzZSBlbWFpbCBmcm9tIENTNTAgQm90IChvbiB0aGlzIGZpcnN0IGFz
+c2lnbm1lbnQsIGluIGZhY3QsICANCnlvdXIgZ3JhZGVib29rIG1heSBub3QgZXZlbiBiZWNvbWUg
+YWN0aXZlIHVudGlsIHRoYXQgc2NvcmUgcmVsZWFzZSBlbWFpbCkuICANClRoZSBzdGFmZiBjYW5u
+b3QgZW50ZXJ0YWluIHJlcXVlc3RzIGZvciBleHBlZGl0ZWQgZ3JhZGluZyB1bmRlciBhbnkgIA0K
+Y2lyY3Vtc3RhbmNlLiBZb3VyIHBhdGllbmNlIGlzIGFwcHJlY2lhdGVkLg0KDQoNCkkgdW5kZXJz
+dGFuZC4NCg0KDQpUaGlzIGNvdXJzZSBpcyBncmFkZWQgYnkgaHVtYW4gZ3JhZGVycywgYW5kIGhh
+cyBhIFpFUk8gVE9MRVJBTkNFIHBsYWdpYXJpc20gIA0KYW5kIGNvbGxhYm9yYXRpb24gcG9saWN5
+LiBJZiAqYW55KiBvZiB5b3VyIGFuc3dlcnMgYXJlIGNvcGllZCBhbmQgcGFzdGVkICANCmZyb20s
+IG9yIG9idmlvdXNseSBiYXNlZCBvbiAoYSkgYW4gb25saW5lIHNvdXJjZSwgaW5jbHVkaW5nICAN
+Cm5vbi1jb3Vyc2Utc2FuY3Rpb25lZCBnZW5lcmF0aXZlIEFJIHRvb2xzIG9yIChiKSBhbm90aGVy
+IHN0dWRlbnQncyB3b3JrIGluICANCnRoZSBjb3Vyc2UsIGluICphbnkqIG9mIHRoZSBjb3Vyc2Un
+cyBmaXZlIGFzc2lnbm1lbnRzIG9yIHRoZSBmaW5hbCBwcm9qZWN0LCAgDQp5b3Ugd2lsbCBiZSBy
+ZXBvcnRlZCB0byBlZFggYW5kIHJlbW92ZWQgZnJvbSB0aGUgY291cnNlIGltbWVkaWF0ZWx5LiBU
+aGVyZSAgDQppcyBubyBvcHBvcnR1bml0eSBmb3IgYXBwZWFsLiBUaGVyZSBhcmUgbm8gd2Fybmlu
+Z3Mgb3Igc2Vjb25kIGNoYW5jZXMuICoNCg0KSXQgaXMgZmFyIGJldHRlciwgd2UgYXNzdXJlIHlv
+dSwgdG8gbGVhdmUgYW4gYW5zd2VyIGJsYW5rIHJhdGhlciB0aGFuIHJpc2sgIA0KaXQuIFRoaXMg
+bWF5IGJlIGFuIG9ubGluZSBjb3Vyc2UsIGJ1dCBpdCBpcyBvZmZlcmVkIGJ5IEhhcnZhcmQsIGFu
+ZCB3ZSdyZSAgDQpnb2luZyB0byBob2xkIHlvdSB0byB0aGF0IHN0YW5kYXJkLiBUaGUgZnVsbCBl
+c3NlbmNlIG9mIGFsbCB3b3JrIHlvdSBzdWJtaXQgIA0KdG8gdGhpcyBjb3Vyc2Ugc2hvdWxkIGJl
+IHlvdXIgb3duLg0KDQoNCkkgdW5kZXJzdGFuZCB0aGlzIHBvbGljeSBhbmQgYWdyZWUgdG8gaXRz
+IHRlcm1zOyBJIGhlcmVieSBhZmZpcm0gdGhhdCBJICANCndpbGwgbm90IHBsYWdpYXJpemUgYW55
+IGFuc3dlcnMgaW4gdGhpcyBjb3Vyc2UuDQoNCg0KV2h5IG1pZ2h0IGJlaW5nIHJlcXVpcmVkIHRv
+IGNoYW5nZSBvdXIgcGFzc3dvcmRzIHJlZ3VsYXJseSBhY3R1YWxseSBwb3NlIGEgIA0KdGhyZWF0
+IHRvIG91ciBzZWN1cml0eT8NCg0KDQpCZWNhdXNlIHdlIG1pZ2h0IGdyb3cgdGlyZWQgb2YgY29u
+c3RhbnRseSBjaGFuZ2luZyBpdCwgaGVuY2UgdXNpbmcgdmVyeSAgDQp2dWxuZXJhYmxlIHBhc3N3
+b3JkcyB0aGF0IGFyZSBlYXNpZXIgdG8gcmVtZW1iZXIgYW5kIHRob3NlIHBhc3N3b3JkcyBjYW4g
+IA0KZWFzaWx5IGJlIGd1ZXNzZWQgb3IgZWFzaWVyIHRvIG9idGFpbiBieSBhdHRhY2tlcnMuIFNv
+IGl0IHdvdWxkIGJlIGJldHRlciAgDQp0byB1c2Ugb25lIGxvbmcgY29tcGxleCBwYXNzd29yZCBm
+b3IgYSB3aGlsZSwgaWYgbm90IGZvcmV2ZXIgcmF0aGVyIHRoYW4gIA0KY2hhbmdpbmcgaXQgY29u
+c3RhbnRseS4NCg0KDQpJZiBJIGhhdmUgYSBzaXgtY2hhcmFjdGVyIHBhc3N3b3JkIGNvbnNpc3Rp
+bmcgb2YgdXBwZXJjYXNlIChFbmdsaXNoKSAgDQpsZXR0ZXJzIGFuZCAoZGVjaW1hbCkgZGlnaXRz
+IG9ubHksIGhvdyBtYW55IHNlY29uZHMgbWlnaHQgaXQgdGFrZSBhbiAgDQphZHZlcnNhcnkgdG8g
+Y3JhY2ssIGFzc3VtaW5nIHRoZXkgbWFrZSBvbmUgYXR0ZW1wdCBwZXIgc2Vjb25kPw0KDQoNCjIx
+NzY3ODIzMzYNCg0KDQpIdW1vciB1cyBmb3IgYSBtb21lbnQsIGFuZCBwbGF5IFRoZSBQYXNzd29y
+ZCBHYW1lLCB0cnlpbmcgdG8gZ2V0IHRocm91Z2ggYXQgIA0KbGVhc3QgUnVsZSAxMi4NCg0KV2hp
+bGUgb2J2aW91c2x5IHRoZSBnYW1lIGl0c2VsZiBpcyBpbiBtYW55IHdheXMgbWVhbnQgdG8gYmUg
+aHVtb3JvdXMsIGl0ICANCmFsc28gY3JpdGlxdWVzIHRoZSBleHBlcmllbmNlIG1hbnkgb2YgdXMg
+aGF2ZSBzZXR0aW5nIHVwIG5ldyBwYXNzd29yZHMuICANCkV4cGxhaW4gaG93IHRoZXJlJ3MgYSB0
+cmFkZS1vZmYgYmV0d2VlbiB1c2FiaWxpdHkgYW5kIHNlY3VyaXR5IGluIHRoZSAgDQpjb250ZXh0
+IG9mIHBhc3N3b3Jkcy4NCg0KDQpUaGVyZSBpcyBhIHRyYWRlLW9mZiBiZXR3ZWVuIHVzYWJpbGl0
+eSBhbmQgc2VjdXJpdHkgYmVjYXVzZSBpZiBhIHBhc3N3b3JkICANCmlzIHRvbyBzZWN1cmUgYW5k
+IGhhcyBhIGxvdCBvZiBjaGFyYWN0ZXJzLCBpdCdzIGhhcmRlciBmb3IgcGVvcGxlIHRvICANCnJl
+bWVtYmVyIGl0LiBIZW5jZSB0aGV5IHdyaXRlIGl0IG9uIGEgcGllY2Ugb2YgcGFwZXIgb3IgdHJ5
+IHRvIHN0b3JlIGl0IGluICANCmEgcGxhY2UgdGhhdCBjb3VsZCBiZSBlYXNpbHkgYWNjZXNzZWQg
+YnkgYXR0YWNrZXJzIGFuZCBpZiB0aGUgcGFzc3dvcmQgaXMgIA0KdG9vIHdlYWsgYW5kIGVhc3kg
+dG8gcmVtZW1iZXIsIGl0J3MgZWFzaWVyIGZvciBzYWlkIGF0dGFja2VycyB0byBnYWluIHRoYXQg
+IA0KaW5mb3JtYXRpb24uIFRoZXJlIHNob3VsZCBiZSBhIGJhbGFuY2UgYmV0d2VlbiBpdCBiZWlu
+ZyBzZWN1cmUgYW5kIGVhc2llciAgDQp0byByZW1lbWJlciBvciBpbXBsZW1lbnRpbmcgdG9vbHMg
+bGlrZSBtdWx0aSBmYWN0b3IgYXV0aGVudGljYXRpb24sIGFuZCAgDQpwYXNzd29yZCBtYW5hZ2Vy
+cyBjYW4gbWFrZSBoYXZpbmcgY29tcGxleCBwYXNzd29yZHMgZWFzaWVyIHRvIHVzZS4NCg0KDQpD
+b25zaWRlciB0aGUgYmVsb3cgY29taWMgZm9yIHRoZSBuZXh0IHR3byBxdWVzdGlvbnMuDQoNCg0K
+U291cmNlOiB4a2NkLmNvbS85MzYvDQoNCg0KQ29uc2lkZXIgdGhlIHRvcCByb3cgb2YgdGhlIGNv
+bWljIGFib3ZlLiBXaHkgYXJlIHBhc3N3b3JkcyBsaWtlIHRob3NlIGVhc3kgIA0KKGZvciBhIGNv
+bXB1dGVyKSB0byBndWVzcyBidXQgaGFyZCAoZm9yIGEgaHVtYW4pIHRvIHJlbWVtYmVyPw0KDQoN
+ClBhc3N3b3JkcyBsaWtlIHRoYXQgZWFzaWVyIGZvciBhIGNvbXB1dGVyIHRvIGd1ZXNzIGJlY2F1
+c2UgdGhleSB1c2UgIA0KcHJlZGljdGFibGUgcGF0dGVybnMgYW5kIGF0dGFja2VycyBjYW4gcXVp
+Y2tseSBydW4gdGhyb3VnaCBhbGwgdGhvc2UgIA0KY29tYmluYXRpb25zIGJlY2F1c2UgaWYgdGhl
+eSdyZSBleHBlcmllbmNlZCwgdGhleSBrbm93IHdoYXQgdG8gbG9vayBmb3IuICANCkJ1dCB0aGUg
+aHVtYW4gYnJhaW4gc29tZXRpbWVzIGRvZXNuJ3Qga25vdyB0aGVzZSBleGFjdCBzdWJzdGl0dXRp
+b25zIHNvICANCml0J3MgaGFyZGVyIGZvciBhIGh1bWFuIHRvIHJlbWVtYmVyDQoNCg0KTm93IGNv
+bnNpZGVyIHRoZSBib3R0b20gcm93IG9mIHRoZSBjb21pYyBhYm92ZS4gV2h5IGFyZSBwYXNzd29y
+ZHMgbGlrZSAgDQp0aG9zZSBoYXJkIChmb3IgYSBjb21wdXRlcikgdG8gZ3Vlc3MgYnV0IGVhc3kg
+KGZvciBhIGh1bWFuKSB0byByZW1lbWJlcj8NCg0KDQpJdCdzIGhhcmQgZm9yIGEgY29tcHV0ZXIg
+dG8gcmVtZW1iZXIgaXQgYmVjYXVzZSBpdCdzIGZvdXIgcmFuZG9tIHdvcmRzIHRoYXQgIA0KYXJl
+IHB1bGxlZCBmcm9tIGEgbWFzc2l2ZSBhcnJheSBvZiBkaWN0aW9uYXJ5IHdvcmRzIGFuZCBpdCdz
+IGVhc2llciBmb3IgdGhlICANCmh1bWFuIG1pbmQgdG8gcmVtZW1iZXIgYmVjYXVzZSB0aG9zZSBy
+YW5kb20gd29yZHMgY3JlYXRlIHNvbWV0aGluZyB0aGF0IG91ciAgDQptaW5kcyBjYW4gcmVtZW1i
+ZXIsIGFuZCB3ZSB1bmRlcnN0YW5kIGl0IGFuZCB0aGV5IGZvcm0gYSBzaW1wbGUgYW5kICANCm1l
+bW9yYWJsZSBwaHJhc2UuDQoNCg0KV2hhdCBpcyBhICJjcmVkZW50aWFsIHN0dWZmaW5nIiBhdHRh
+Y2s/DQoNCg0KQSBjcmVkZW50aWFsIHN0dWZmaW5nIGlzIGFuIGF0dGFjayB3aGVyZSBhdHRhY2tl
+cnMgdXNlIHVzZXJuYW1lcyBlbWFpbHMgYW5kICANCnBhc3N3b3JkIGxlYWtlZCBmcm9tIGRhdGEg
+YnJlYWNoZXMgYW5kIHRyaWVzIHRoZSBzYW1lIGNyZWRlbnRpYWxzIG9uIG90aGVyICANCndlYnNp
+dGVzIGluIGhvcGVzIHRoYXQgdGhlIHBlcnNvbiBiZWluZyBhdHRhY2tlZCBoYXMgdXNlZCB0aGUg
+c2FtZSBlbWFpbCAgDQphbmQgcGFzc3dvcmRzIGFjcm9zcyBtdWx0aXBsZSBzaXRlcy4NCg0KDQpQ
+cm92aWRlIGEgc3BlY2lmaWMgZXhhbXBsZSBvZiBzb21ldGhpbmcgdGhhdCB3b3VsZCBiZSBjb25z
+aWRlcmVkIGEgdHlwZSBvZiAgDQprbm93bGVkZ2UgZmFjdG9yIGZvciBhdXRoZW50aWNhdGlvbiBw
+dXJwb3Nlcy4NCg0KRG8gTk9UIHByb3ZpZGUgYW55IG9mIHlvdXIgb3duIGtub3dsZWRnZSBmYWN0
+b3JzIChvciBhbnl0aGluZyByZXNlbWJsaW5nICANCnRoZW0pIHRoZW1zZWx2ZXMgYXMgYW4gYW5z
+d2VyIHRvIHRoaXMgcXVlc3Rpb24uIFdlIGFyZSBsb29raW5nIGZvciB5b3UgdG8gIA0KYW5zd2Vy
+IHRoZSBxdWVzdGlvbiBpbiB0aGUgZ2VuZXJhbCBzZW5zZSAoYSAidHlwZSBvZiIpLg0KDQoNCg0K
+SWYgeW91IHByb3ZpZGUgYW4gYW5zd2VyIHRoYXQgaXMsIG9yIGFwcGVhcnMgdG8gYmUsIGFuIGFj
+dHVhbCBzcGVjaWZpYyAgDQprbm93bGVkZ2UgZmFjdG9yLCB0aGUgYW5zd2VyIFdJTEwgYmUgbWFy
+a2VkIGluY29ycmVjdCwgd2l0aG91dCBleGNlcHRpb24sICANCmFuZCB5b3Ugc2hvdWxkIGNvbnNp
+ZGVyIHRoYXQga25vd2xlZGdlIGZhY3RvciB0byBoYXZlIGJlZW4gY29tcHJvbWlzZWQuDQoNCg0K
+4oCcVGhlIGFuc3dlciB0byBhIHNlY3VyaXR5IHF1ZXN0aW9u4oCdDQoNCg0KUHJvdmlkZSBhIHNw
+ZWNpZmljIGV4YW1wbGUgb2Ygc29tZXRoaW5nIHRoYXQgd291bGQgYmUgY29uc2lkZXJlZCBhIHR5
+cGUgb2YgIA0KaW5oZXJlbmNlIGZhY3RvciBmb3IgYXV0aGVudGljYXRpb24gcHVycG9zZXMuDQoN
+Cg0KWW91ciBGaW5nZXJwcmludA0KDQoNCldoeSBhcmUgcGhpc2hpbmcgYXR0YWNrcyBzbyBkaWZm
+aWN1bHQgdG8gcHJldmVudD8NCg0KDQpCZWNhdXNlIHRoZXkgZXhwbG9pdCBwZW9wbGUgYW5kIG5v
+dCBqdXN0IHRoZSB0ZWNobm9sb2d5LCBubyBtYXR0ZXIgdGhlICANCmFtb3VudCBvZiBmaXJld2Fs
+bHMgb3IgYW50aXZpcnVzIGEgcGVyc29uIGhhcyBpdCBjYW5ub3Qgc3RvcCBhIHVzZXIgZnJvbSAg
+DQpjbGlja2luZyBhIGxpbmsgYW5kIGlmIHRoYXQgbGluayBpcyB3ZWxsIG1hZGUsIGRpc2d1aXNl
+ZCBhcyBsZWdpdCAgDQpjb3Jwb3JhdGlvbiBvciBidXNpbmVzcyBzb21lYm9keSBjb3VsZCBwdXQg
+eW91ciBpbmZvcm1hdGlvbiBpbiB0aGVyZSAgDQp3aXRob3V0IHRoaW5raW5nIHR3aWNlIGFib3V0
+IGl0LiBUaGUgb25seSB3YXkgdG8gYWN0dWFsbHkgcHJldmVudCBhICANCnBoaXNoaW5nIGF0dGFj
+ayBpcyBieSBpbXBsZW1lbnRpbmcgYmVzdCBwcmFjdGljZXMgZm9yIHRlY2hub2xvZ3kgdXNlIGFu
+ZCAgDQpyZW1haW4gZWR1Y2F0ZWQgYW5kIHNvbWV3aGF0IHBhcmFub2lkIGFib3V0IGxpbmtzIHdl
+IGNsaWNrIG9uIGFuZCB3aGVyZSB3ZSAgDQpzdWJtaXQgc2Vuc2l0aXZlIGluZm9ybWF0aW9uLg0K
+DQoNClN1cHBvc2UgdGhhdCB5b3VyIGJvc3MgYXNrcyB5b3Ugd2hldGhlciB0aGUgY29tcGFueSBz
+aG91bGQgcmVxdWlyZSB1c2Ugb2YgIA0KcGFzc3dvcmQgbWFuYWdlcnMgZm9yIGFsbCBlbXBsb3ll
+ZXMuDQoNCkV4cGxhaW4gaW4gYSBzaG9ydCBwYXJhZ3JhcGggd2h5IHlvdSBtaWdodCB3YW50IGV2
+ZXJ5b25lIGluIHRoZSBjb21wYW55IHRvICANCnVzZSBhIHBhc3N3b3JkIG1hbmFnZXIuDQoNCg0K
+SSB3b3VsZCB3YW50IGV2ZXJ5b25lIGluIHRoZSBjb21wYW55IHRvIHVzZSBhIHBhc3N3b3JkIG1h
+bmFnZXIgYmVjYXVzZSB0aGF0ICANCndheSB0aGUgZW1wbG95ZWVzIGNhbiBtYWtlIGNvbXBsZXgg
+cGFzc3dvcmRzLCBsb25nZXIgcGFzc3dvcmRzIHdpdGhvdXQgdGhlICANCnJpc2sgb2YgZm9yZ2V0
+dGluZyBvciB3cml0aW5nIGl0IGRvd24uIFRoaXMgd2lsbCBtYWtlIHN1cmUgdGhhdCBpZiB0aGUg
+IA0KY29tcGFueSBkb2VzIGhhdmUgYSBwYXNzd29yZCBwb2xpY3ksIHRoZSBlbXBsb3llZXMgY2Fu
+IGVhc2lseSBpbXBsZW1lbnQgIA0KdGhhdCBwb2xpY3kgd2l0aG91dCBydW5uaW5nIGludG8gdGhl
+IHJpc2sgb2YgZXhwb3NpbmcgdGhlaXIgbWVtb3JpemVkICANCnNlY3JldHMgYW5kIHNpbmNlIGEg
+cGFzc3dvcmQgbWFuYWdlciBjYW4gcmVtZW1iZXIgVVJMcyBvZiBsZWdpdCB3ZWJzaXRlcywgIA0K
+dGhlIGVtcGxveWVlcyBhcmUgbGVzcyBzdXNjZXB0aWJsZSB0byBwaGlzaGluZyBhdHRhY2tzLiBJ
+dCBjb3VsZCBhbHNvIGJlICANCmNvc3QtZWZmZWN0aXZlIGZvciB0aGUgY29tcGFueSByYXRoZXIg
+dGhhbiB1c2luZyBhIHBvc3Nlc3Npb24gZmFjdG9yLg0KDQoNCkZlZWRiYWNrDQoNCg0KSG93IGRp
+ZCB5b3UgZmluZCB0aGUgZGlmZmljdWx0eSBvZiB0aGlzIGFzc2lnbm1lbnQ/ICoNCg0KDQoxIDIg
+MyA0IDUNCg0KVG9vIGVhc3kNCg0KDQpUb28gaGFyZA0KDQoNCkFib3V0IGhvdyBtYW55IE1JTlVU
+RVMgd291bGQgeW91IHNheSB5b3Ugc3BlbnQgb24gdGhpcyBhc3NpZ25tZW50PyAqDQoNCkp1c3Qg
+dG8gc2V0IGV4cGVjdGF0aW9ucyBmb3IgZnV0dXJlIHN0dWRlbnRzLg0KDQoNCjMwDQoNCg0KQ3Jl
+YXRlIHlvdXIgb3duIEdvb2dsZSBGb3JtDQoNCkRvZXMgdGhpcyBmb3JtIGxvb2sgc3VzcGljaW91
+cz8gUmVwb3J0DQoNCg0K
+--0000000000003d4c1c063ee20deb
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><style nonce=3D"Z3WzHxu6DH7LXus-mrB0Ig">@import url(https://fon=
+ts.googleapis.com/css?family=3DGoogle+Sans:400,500|Roboto:300,400,400i,500,=
+700&subset=3Dlatin,vietnamese,latin-ext,cyrillic,greek,cyrillic-ext,greek-e=
+xt);</style><style nonce=3D"Z3WzHxu6DH7LXus-mrB0Ig">[class=3D"x_body-conten=
+t-wrapper"] * {white-space: normal !important;}</style></head><body dir=3D"=
+ltr" style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif=
+;font-size: 14px; font-weight: 400; line-height: 20px;text-align: start; wo=
+rd-wrap: break-word; margin: 0; padding: 0; height: 100%; width: 100%;"><ta=
+ble border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"background-co=
+lor:rgb(0,188,212);" width=3D"100%" role=3D"presentation"><tbody><tr height=
+=3D"64px"><td style=3D"padding: 0 24px;"><img alt=3D"Google Forms" height=
+=3D"26px" style=3D"display: inline-block; margin: 0; vertical-align: middle=
+;" width=3D"143px" src=3D"https://www.gstatic.com/docs/forms/google_forms_l=
+ogo_lockup_black_2x.png"></td></tr></tbody></table><div class=3D"body-conte=
+nt-wrapper" style=3D"padding: 12px; background-color: rgb(217,245,249);"><d=
+iv style=3D"margin: 0 auto; max-width: 640px; min-width: 154px;"><div style=
+=3D"border: 1px solid #dadce0; padding: 20px 12px;background-color: #fff; b=
+order-radius: 8px; margin-bottom: 12px;padding: 20px;"><h1 style=3D"color: =
+#202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 20px; fon=
+t-weight: 400; line-height: 28px;margin: 0 0 12px;">Thanks for filling out =
+<a href=3D"https://docs.google.com/forms/d/e/1FAIpQLSeVGJ6I0hSpb4NqzfbCC8o1=
+IkezdTCw4fpHpMTLX-eR4fsQeg/viewform?pli=3D1&amp;pli=3D1&amp;usp=3Dmail_form=
+_link" target=3D"_blank" style=3D"white-space: pre-wrap;">Assignment on Sec=
+uring Accounts for CS50 Cybersecurity</a></h1>Here's what was received.</di=
+v><div style=3D"border-bottom: 1px solid #dadce0; border-left: 1px solid #d=
+adce0; border-right: 1px solid #dadce0; border-top: 8px solid rgb(0,188,212=
+); padding: 20px;background-color: #fff; border-radius: 8px; margin-bottom:=
+ 12px;"><h1 dir=3D"ltr" style=3D"font-family: Roboto,Helvetica,Arial,sans-s=
+erif;font-size: 32px; font-weight: 400; line-height: 42px;white-space: pre-=
+wrap;margin: 0 0 12px;">Assignment on Securing Accounts for CS50 Cybersecur=
+ity</h1><div style=3D"white-space: pre-wrap;margin-bottom: 12px;">All assig=
+nments in CS50 Cybersecurity are out of 10 points. A score of 7 points or b=
+etter (70%) is required to be considered to have "passed" an assignment in =
+this course. <b>Please do not resubmit an assignment if you have already ob=
+tained a passing score</b>--we consider that spam, and if detected, the sub=
+mission will be deleted, meaning you will not receive the score back anyway=
+. You don't receive a final grade at the end of the course, so it will have=
+ no bearing on your certificate, and it will only slow down our graders!<di=
+v><br></div><div><i>Submitting this assignment more than twice in a single =
+grading cycle constitutes spamming the staff, as well. Upon your third subm=
+ission, all of your submissions from the current grading cycle are automati=
+cally deleted from the system. You will, therefore, not receive any feedbac=
+k and will need to wait at least three weeks before you submit again.</i><b=
+r><br>Unlike CS50x, assignments in this course are graded on a set schedule=
+, and depending on when you submitted, it may take up to three weeks for yo=
+ur work to be graded. Do be patient! Project scores and assignment status o=
+n=C2=A0<a href=3D"http://cs50.me/cybersecurity">cs50.me/cybersecurity</a>=
+=C2=A0(e.g. "Your submission has been received...") will likely change over=
+ time and are not final until the scores have been released.</div></div></d=
+iv><div style=3D"border: 1px solid #dadce0; padding: 20px 12px;background-c=
+olor: #fff; border-radius: 8px; margin-bottom: 12px;margin-bottom: 12px;"><=
+div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"color: #202124;fon=
+t-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px; font-weight: 4=
+00; line-height: 24px;white-space: pre-wrap;margin: 0 0 16px;">Email<span s=
+tyle=3D"color: #d93025;" aria-label=3D"Required question"> *</span></h2></d=
+iv><div style=3D"padding: 0 12px;"><div style=3D"width: 100%;"><div dir=3D"=
+auto" style=3D"white-space: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0=
+.38);margin: 12px 0 8px; min-height: 20px;display: inline-block; max-width:=
+ 100%; min-width: 50%;">pogosonkeran@gmail.com</div></div></div></div><div =
+style=3D"border: 1px solid #dadce0; padding: 20px 12px;background-color: #f=
+ff; border-radius: 8px; margin-bottom: 12px;margin-bottom: 12px;"><div styl=
+e=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"color: #202124;font-family=
+: Roboto,Helvetica,Arial,sans-serif;font-size: 16px; font-weight: 400; line=
+-height: 24px;white-space: pre-wrap;margin: 0 0 16px;">Name<span style=3D"c=
+olor: #d93025;" aria-label=3D"Required question"> *</span></h2></div><div s=
+tyle=3D"padding: 0 12px;"><div style=3D"width: 100%;"><div dir=3D"auto" sty=
+le=3D"white-space: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);marg=
+in: 12px 0 8px; min-height: 20px;display: inline-block; max-width: 100%; mi=
+n-width: 50%;">Ohiremen Pogoson</div></div></div></div><div style=3D"border=
+: 1px solid #dadce0; padding: 20px 12px;background-color: #fff; border-radi=
+us: 8px; margin-bottom: 12px;margin-bottom: 12px;"><div style=3D"padding: 0=
+ 12px;"><h2 dir=3D"auto" style=3D"color: #202124;font-family: Roboto,Helvet=
+ica,Arial,sans-serif;font-size: 16px; font-weight: 400; line-height: 24px;w=
+hite-space: pre-wrap;margin: 0 0 16px;">edX Username<span style=3D"color: #=
+d93025;" aria-label=3D"Required question"> *</span></h2></div><div style=3D=
+"padding: 0 12px;"><div style=3D"width: 100%;"><div dir=3D"auto" style=3D"w=
+hite-space: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12p=
+x 0 8px; min-height: 20px;display: inline-block; max-width: 100%; min-width=
+: 50%;">pogosonkeran</div></div></div></div><div style=3D"border: 1px solid=
+ #dadce0; padding: 20px 12px;background-color: #fff; border-radius: 8px; ma=
+rgin-bottom: 12px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2=
+ dir=3D"auto" style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,s=
+ans-serif;font-size: 16px; font-weight: 400; line-height: 24px;white-space:=
+ pre-wrap;margin: 0;">What is your GitHub username?<span style=3D"color: #d=
+93025;" aria-label=3D"Required question"> *</span></h2><div style=3D"color:=
+ #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 12px; fo=
+nt-weight: 400; letter-spacing: .25px; line-height: 16px;white-space: pre-w=
+rap;margin: 4px 0 20px;" dir=3D"auto">If you do not already have a GitHub a=
+ccount, you can sign up for one at=C2=A0<a href=3D"https://github.com/join"=
+>https://github.com/join</a>. You can then use this account to log in to=C2=
+=A0<a href=3D"http://cs50.me/cybersecurity">cs50.me/cybersecurity</a>=C2=A0=
+to track your progress in the course (your progress will only show up after=
+ you have received at least one score release email from CS50 Bot, so do be=
+ patient!). Don't worry about seeing a 'No Submissions' message on=C2=A0<a =
+href=3D"http://submit.cs50.io/">submit.cs50.io</a>, if you find that. The c=
+ourse collects submissions using Google Forms, and only the gradebook on=C2=
+=A0<a href=3D"http://cs50.me/cybersecurity">cs50.me/cybersecurity</a>=C2=A0=
+is important!<div><ul><li><b><u>Be certain the username you provide is corr=
+ect!</u>=C2=A0</b>If you provide the wrong username, you will not be able t=
+o see your scores. <i><b>This is the only opportunity you will have to prov=
+ide the correct username in this course!</b></i></li><li><b><u>Your GitHub =
+username should not be changed while you are taking this course.</u>=C2=A0<=
+/b>The current gradebook system is not designed to accommodate name changes=
+.</li><li><b><u>Be sure to remove extraneous characters</u>,=C2=A0</b>such =
+as an @ prefix. Do not input a URL or email address, just your username.</l=
+i></ul></div></div></div><div style=3D"padding: 0 12px;"><div style=3D"widt=
+h: 100%;"><div dir=3D"auto" style=3D"white-space: pre-wrap;border-bottom: 1=
+px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;display: in=
+line-block; max-width: 100%; min-width: 50%;">pogosonkeran</div></div></div=
+></div><div style=3D"border: 1px solid #dadce0; padding: 20px 12px;backgrou=
+nd-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-bottom: 12px=
+;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"color: #202124=
+;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px; font-weigh=
+t: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16px;">City, St=
+ate, Country<span style=3D"color: #d93025;" aria-label=3D"Required question=
+"> *</span></h2></div><div style=3D"padding: 0 12px;"><div style=3D"width: =
+100%;"><div dir=3D"auto" style=3D"white-space: pre-wrap;border-bottom: 1px =
+dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;display: inlin=
+e-block; max-width: 100%; min-width: 50%;">Columbia, South Carolina, U.S.A<=
+/div></div></div></div><div style=3D"border: 1px solid #dadce0; padding: 20=
+px 12px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;mar=
+gin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=
+=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size=
+: 16px; font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0=
+;">Acknowledgement<span style=3D"color: #d93025;" aria-label=3D"Required qu=
+estion"> *</span></h2><div style=3D"color: #202124;font-family: Roboto,Helv=
+etica,Arial,sans-serif;font-size: 12px; font-weight: 400; letter-spacing: .=
+25px; line-height: 16px;white-space: pre-wrap;margin: 4px 0 20px;" dir=3D"a=
+uto">Unlike our course CS50x, grading in this course is not done automatica=
+lly, and there are human reviewers for each assignment. Grading may, depend=
+ing on exactly when in our grading cycle you submit, take up to three weeks=
+ from the time you submit. Your grade status may change in your gradebook a=
+t=C2=A0<a href=3D"http://cs50.me/cs50cy">cs50.me/cs50cy</a>=C2=A0in the int=
+erim, but grades are never final until you receive a score release email fr=
+om CS50 Bot (on this first assignment, in fact, your gradebook may not even=
+ become active until that score release email). The staff cannot entertain =
+requests for expedited grading under any circumstance. Your patience is app=
+reciated.<br></div></div><div style=3D"padding: 0 12px;"><div style=3D"marg=
+in-top: 16px;"><table style=3D"color: #202124;font-family: Roboto,Helvetica=
+,Arial,sans-serif;font-size: 14px; font-weight: 400; line-height: 20px;marg=
+in-top: 8px; table-layout: fixed;"><tr><td><div role=3D"radio" aria-checked=
+=3D"true" aria-label=3D"I understand." style=3D"border: solid 2px #5f6368; =
+height: 16px; width: 16px; border-radius: 50%;"><div style=3D"background-co=
+lor: #5f6368; border: solid 5px #5f6368; border-radius: 50%; margin: 3px; h=
+eight: 0; width: 0;"></div></div></td><td style=3D"min-width: 8px;"></td><t=
+d style=3D"word-break: break-word;">I understand.</td></tr></table></div></=
+div></div><div style=3D"border: 1px solid #dadce0; padding: 20px 12px;backg=
+round-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-bottom: 1=
+2px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"color: #202=
+124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px; font-we=
+ight: 400; line-height: 24px;white-space: pre-wrap;margin: 0;">This course =
+is graded by human graders, and has a ZERO TOLERANCE plagiarism and collabo=
+ration policy. If *any* of your answers are copied and pasted from, or obvi=
+ously based on (a) an online source, including non-course-sanctioned genera=
+tive AI tools or (b) another student's work in the course, in *any* of the =
+course's five assignments or the final project, you will be reported to edX=
+ and removed from the course immediately. There is no opportunity for appea=
+l. There are no warnings or second chances.<span style=3D"color: #d93025;" =
+aria-label=3D"Required question"> *</span></h2><div style=3D"color: #202124=
+;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 12px; font-weigh=
+t: 400; letter-spacing: .25px; line-height: 16px;white-space: pre-wrap;marg=
+in: 4px 0 20px;" dir=3D"auto">It is far better, we assure you, to leave an =
+answer blank rather than risk it. This may be an online course, but it is o=
+ffered by Harvard, and we're going to hold you to that standard.=C2=A0<b>Th=
+e full essence of all work you submit to this course should be your own.</b=
+></div></div><div style=3D"padding: 0 12px;"><div style=3D"margin-top: 16px=
+;"><table style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-=
+serif;font-size: 14px; font-weight: 400; line-height: 20px;margin-top: 8px;=
+ table-layout: fixed;"><tr><td><div role=3D"radio" aria-checked=3D"true" ar=
+ia-label=3D"I understand this policy and agree to its terms; I hereby affir=
+m that I will not plagiarize any answers in this course." style=3D"border: =
+solid 2px #5f6368; height: 16px; width: 16px; border-radius: 50%;"><div sty=
+le=3D"background-color: #5f6368; border: solid 5px #5f6368; border-radius: =
+50%; margin: 3px; height: 0; width: 0;"></div></div></td><td style=3D"min-w=
+idth: 8px;"></td><td style=3D"word-break: break-word;">I understand this po=
+licy and agree to its terms; I hereby affirm that I will not plagiarize any=
+ answers in this course.</td></tr></table></div></div></div><div style=3D"b=
+order: 1px solid #dadce0; padding: 20px 12px;background-color: #fff; border=
+-radius: 8px; margin-bottom: 12px;margin-bottom: 12px;"><div style=3D"paddi=
+ng: 0 12px;"><h2 dir=3D"auto" style=3D"color: #202124;font-family: Roboto,H=
+elvetica,Arial,sans-serif;font-size: 16px; font-weight: 400; line-height: 2=
+4px;white-space: pre-wrap;margin: 0 0 16px;">Why might being required to ch=
+ange our passwords regularly actually pose a threat to our security?</h2></=
+div><div style=3D"padding: 0 12px;"><div dir=3D"auto" style=3D"white-space:=
+ pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; mi=
+n-height: 20px;width: 100%;">Because we might grow tired of constantly chan=
+ging it, hence using very vulnerable passwords that are easier to remember =
+and those passwords can easily be guessed or easier to obtain by attackers.=
+ So it would be better to use one long complex password for a while, if not=
+ forever rather than changing it constantly.</div></div></div><div style=3D=
+"border: 1px solid #dadce0; padding: 20px 12px;background-color: #fff; bord=
+er-radius: 8px; margin-bottom: 12px;margin-bottom: 12px;"><div style=3D"pad=
+ding: 0 12px;"><h2 dir=3D"auto" style=3D"color: #202124;font-family: Roboto=
+,Helvetica,Arial,sans-serif;font-size: 16px; font-weight: 400; line-height:=
+ 24px;white-space: pre-wrap;margin: 0 0 16px;">If I have a six-character pa=
+ssword consisting of uppercase (English) letters and (decimal) digits <b>on=
+ly</b>, how many seconds might it take an adversary to crack, assuming they=
+ make one attempt per second?</h2></div><div style=3D"padding: 0 12px;"><di=
+v style=3D"width: 100%;"><div dir=3D"auto" style=3D"white-space: pre-wrap;b=
+order-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 2=
+0px;display: inline-block; max-width: 100%; min-width: 50%;">2176782336</di=
+v></div></div></div><div style=3D"border: 1px solid #dadce0; padding: 20px =
+12px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;margin=
+-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"c=
+olor: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16p=
+x; font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16=
+px;">Humor us for a moment, and play <a href=3D"https://neal.fun/password-g=
+ame/">The Password Game</a>, trying to get through at least Rule 12.<br><br=
+>While obviously the game itself is in many ways meant to be humorous, it a=
+lso critiques the experience many of us have setting up new passwords. Expl=
+ain how there's a trade-off between usability and security in the context o=
+f passwords.</h2></div><div style=3D"padding: 0 12px;"><div dir=3D"auto" st=
+yle=3D"white-space: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);mar=
+gin: 12px 0 8px; min-height: 20px;width: 100%;">There is a trade-off betwee=
+n usability and security because if a password is too secure and has a lot =
+of characters, it=E2=80=99s harder for people to remember it. Hence they wr=
+ite it on a piece of paper or try to store it in a place that could be easi=
+ly accessed by attackers and if the password is too weak and easy to rememb=
+er, it=E2=80=99s easier for said attackers to gain that information. There =
+should be a balance between it being secure and easier to remember or imple=
+menting tools like multi factor authentication, and password managers can m=
+ake having complex passwords easier to use.</div></div></div><div style=3D"=
+border: 1px solid #dadce0; padding: 20px 12px;background-color: #fff; borde=
+r-radius: 8px; margin-bottom: 12px;margin-bottom: 12px;"><div style=3D"padd=
+ing: 0 12px;"><h2 dir=3D"auto" style=3D"color: #202124;font-family: Roboto,=
+Helvetica,Arial,sans-serif;font-size: 16px; font-weight: 400; line-height: =
+24px;white-space: pre-wrap;margin: 0 0 16px;">Consider the below comic for =
+the next two questions.<br></h2><div style=3D"text-align: left;"><img style=
+=3D"border: none; max-height: 100%; max-width: 100%;width: 740px; " title=
+=3D"Source: xkcd.com/936/" src=3D"https://lh7-rt.googleusercontent.com/form=
+sz/AN7BsVDODpy-GRHUMQznhGUu0G1-yzzs_0lZTjiNkTZaxKmFNKr_LrfXXwrlDsWMg0x1wDaF=
+JJkUphHa2Wfdk0qUBWhI34s8U_PokMXuyLMXqogQYMS4YsClg2Wjznrfx1yWQK_XK9g7nzi_Kpb=
+BCT_PdBnoUlmja14ptg9WkOKzbYaWtXN5ZiMbv5U-L56X0mXlePpe8yLuMFU0AO87=3Dw740?ke=
+y=3DiuUiatZll9faRBfhqS1Yhg" alt=3D"Source: xkcd.com/936/"></div></div><div =
+style=3D"padding: 0 12px;"></div></div><div style=3D"border: 1px solid #dad=
+ce0; padding: 20px 12px;background-color: #fff; border-radius: 8px; margin-=
+bottom: 12px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=
+=3D"auto" style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-=
+serif;font-size: 16px; font-weight: 400; line-height: 24px;white-space: pre=
+-wrap;margin: 0 0 16px;">Consider the top row of the comic above. Why are p=
+asswords like those easy (for a computer) to guess but hard (for a human) t=
+o remember?</h2></div><div style=3D"padding: 0 12px;"><div dir=3D"auto" sty=
+le=3D"white-space: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);marg=
+in: 12px 0 8px; min-height: 20px;width: 100%;">Passwords like that easier f=
+or a computer to guess because they use predictable patterns and attackers =
+can quickly run through all those combinations because if they=E2=80=99re e=
+xperienced, they know what to look for. But the human brain sometimes doesn=
+=E2=80=99t know these exact substitutions so it=E2=80=99s harder for a huma=
+n to remember</div></div></div><div style=3D"border: 1px solid #dadce0; pad=
+ding: 20px 12px;background-color: #fff; border-radius: 8px; margin-bottom: =
+12px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto"=
+ style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;fon=
+t-size: 16px; font-weight: 400; line-height: 24px;white-space: pre-wrap;mar=
+gin: 0 0 16px;">Now consider the bottom row of the comic above. Why are pas=
+swords like those hard (for a computer) to guess but easy (for a human) to =
+remember?<br></h2></div><div style=3D"padding: 0 12px;"><div dir=3D"auto" s=
+tyle=3D"white-space: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);ma=
+rgin: 12px 0 8px; min-height: 20px;width: 100%;">It=E2=80=99s hard for a co=
+mputer to remember it because it=E2=80=99s four random words that are pulle=
+d from a massive array of dictionary words and it=E2=80=99s easier for the =
+human mind to remember because those random words create something that our=
+ minds can remember, and we understand it and they form a simple and memora=
+ble phrase.</div></div></div><div style=3D"border: 1px solid #dadce0; paddi=
+ng: 20px 12px;background-color: #fff; border-radius: 8px; margin-bottom: 12=
+px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" s=
+tyle=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-=
+size: 16px; font-weight: 400; line-height: 24px;white-space: pre-wrap;margi=
+n: 0 0 16px;">What is a "credential stuffing" attack?</h2></div><div style=
+=3D"padding: 0 12px;"><div dir=3D"auto" style=3D"white-space: pre-wrap;bord=
+er-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px=
+;width: 100%;">A credential stuffing is an attack where attackers use usern=
+ames emails and password leaked from data breaches and tries the same crede=
+ntials on other websites in hopes that the person being attacked has used t=
+he same email and passwords across multiple sites.</div></div></div><div st=
+yle=3D"border: 1px solid #dadce0; padding: 20px 12px;background-color: #fff=
+; border-radius: 8px; margin-bottom: 12px;margin-bottom: 12px;"><div style=
+=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"color: #202124;font-family:=
+ Roboto,Helvetica,Arial,sans-serif;font-size: 16px; font-weight: 400; line-=
+height: 24px;white-space: pre-wrap;margin: 0;">Provide a <u>specific</u>=C2=
+=A0example of something that would be considered <b><i>a type of=C2=A0</i><=
+/b><i><b>knowledge factor</b> </i>for authentication purposes.</h2><div sty=
+le=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-si=
+ze: 12px; font-weight: 400; letter-spacing: .25px; line-height: 16px;white-=
+space: pre-wrap;margin: 4px 0 20px;" dir=3D"auto"><i>Do NOT provide any of =
+your own knowledge factors (or anything resembling them) themselves as an a=
+nswer to this question. We are looking for you to answer the question in th=
+e general sense (a "type of").</i><div><b><br></b></div><div><b>If you prov=
+ide an answer that is, or appears to be, an actual specific knowledge facto=
+r, the answer WILL be marked incorrect, without exception, and you should c=
+onsider that knowledge factor to have been compromised.</b></div></div></di=
+v><div style=3D"padding: 0 12px;"><div style=3D"width: 100%;"><div dir=3D"a=
+uto" style=3D"white-space: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.=
+38);margin: 12px 0 8px; min-height: 20px;display: inline-block; max-width: =
+100%; min-width: 50%;">=E2=80=9CThe answer to a security question=E2=80=9D<=
+/div></div></div></div><div style=3D"border: 1px solid #dadce0; padding: 20=
+px 12px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;mar=
+gin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=
+=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size=
+: 16px; font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0=
+ 0 16px;">Provide a <u>specific</u>=C2=A0example of something that would be=
+ considered <b><i>a type of=C2=A0</i></b><i><b>inherence=C2=A0factor</b> </=
+i>for authentication purposes.</h2></div><div style=3D"padding: 0 12px;"><d=
+iv style=3D"width: 100%;"><div dir=3D"auto" style=3D"white-space: pre-wrap;=
+border-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: =
+20px;display: inline-block; max-width: 100%; min-width: 50%;">Your Fingerpr=
+int </div></div></div></div><div style=3D"border: 1px solid #dadce0; paddin=
+g: 20px 12px;background-color: #fff; border-radius: 8px; margin-bottom: 12p=
+x;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" st=
+yle=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-s=
+ize: 16px; font-weight: 400; line-height: 24px;white-space: pre-wrap;margin=
+: 0 0 16px;">Why are phishing attacks so difficult to prevent?</h2></div><d=
+iv style=3D"padding: 0 12px;"><div dir=3D"auto" style=3D"white-space: pre-w=
+rap;border-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-heig=
+ht: 20px;width: 100%;">Because they exploit people and not just the technol=
+ogy, no matter the amount of firewalls or antivirus a person has it cannot =
+stop a user from clicking a link and if that link is well made, disguised a=
+s legit corporation or business somebody could put your information in ther=
+e without thinking twice about it. The only way to actually prevent a phish=
+ing attack is by implementing best practices for technology use and remain =
+educated and somewhat paranoid about links we click on and where we submit =
+sensitive information.</div></div></div><div style=3D"border: 1px solid #da=
+dce0; padding: 20px 12px;background-color: #fff; border-radius: 8px; margin=
+-bottom: 12px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=
+=3D"auto" style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-=
+serif;font-size: 16px; font-weight: 400; line-height: 24px;white-space: pre=
+-wrap;margin: 0 0 16px;">Suppose that your boss asks you whether the compan=
+y should require use of password managers for all employees.<br><br>Explain=
+ in a short paragraph why you might want everyone in the company to use a p=
+assword manager.=C2=A0</h2></div><div style=3D"padding: 0 12px;"><div dir=
+=3D"auto" style=3D"white-space: pre-wrap;border-bottom: 1px dotted rgba(0,0=
+,0,0.38);margin: 12px 0 8px; min-height: 20px;width: 100%;">I would want ev=
+eryone in the company to use a password manager because that way the employ=
+ees can make complex passwords, longer passwords without the risk of forget=
+ting or writing it down. This will make sure that if the company does have =
+a password policy, the employees can easily implement that policy without r=
+unning into the risk of exposing their memorized secrets and since a passwo=
+rd manager can remember URLs of legit websites, the employees are less susc=
+eptible to phishing attacks. It could also be cost-effective for the compan=
+y rather than using a possession factor.</div></div></div><div style=3D"bor=
+der: 1px solid #dadce0; padding: 20px 12px;background-color: #fff; border-r=
+adius: 8px; margin-bottom: 12px;margin-bottom: 12px;"><div style=3D"padding=
+: 0 12px;"><h3 dir=3D"auto" style=3D"color: #202124;font-family: Roboto,Hel=
+vetica,Arial,sans-serif;font-size: 16px; font-weight: 500; line-height: 24p=
+x;white-space: pre-wrap;margin: 0;">Feedback</h3></div><div style=3D"paddin=
+g: 0 12px;"></div></div><div style=3D"border: 1px solid #dadce0; padding: 2=
+0px 12px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;ma=
+rgin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=
+=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size=
+: 16px; font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0=
+ 0 16px;">How did you find the difficulty of this assignment?<span style=3D=
+"color: #d93025;" aria-label=3D"Required question"> *</span></h2></div><div=
+ style=3D"max-width: 100%; overflow-x: auto;"><div style=3D"border: solid 2=
+px #f5f5f5; border-radius: 4px; display: inline-block; padding: 8px;"><tabl=
+e style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;fo=
+nt-size: 14px; font-weight: 400; line-height: 20px;word-break: break-word; =
+text-align: center;" role=3D"presentation"><tr><td></td><td style=3D"paddin=
+g-bottom: 16px;">1</td><td style=3D"padding-bottom: 16px;">2</td><td style=
+=3D"padding-bottom: 16px;">3</td><td style=3D"padding-bottom: 16px;">4</td>=
+<td style=3D"padding-bottom: 16px;">5</td><td></td></tr><tr><td style=3D"mi=
+n-width: 100px; padding: 0 8px;">Too easy</td><td style=3D"vertical-align: =
+top;"><div style=3D"display: inline-block;"><div role=3D"radio" aria-checke=
+d=3D"false" aria-label=3D"1" style=3D"border: solid 2px #9aa0a6; height: 16=
+px; width: 16px; border-radius: 50%;"></div></div></td><td style=3D"vertica=
+l-align: top;"><div style=3D"display: inline-block;"><div role=3D"radio" ar=
+ia-checked=3D"true" aria-label=3D"2" style=3D"border: solid 2px #5f6368; he=
+ight: 16px; width: 16px; border-radius: 50%;"><div style=3D"background-colo=
+r: #5f6368; border: solid 5px #5f6368; border-radius: 50%; margin: 3px; hei=
+ght: 0; width: 0;"></div></div></div></td><td style=3D"vertical-align: top;=
+"><div style=3D"display: inline-block;"><div role=3D"radio" aria-checked=3D=
+"false" aria-label=3D"3" style=3D"border: solid 2px #9aa0a6; height: 16px; =
+width: 16px; border-radius: 50%;"></div></div></td><td style=3D"vertical-al=
+ign: top;"><div style=3D"display: inline-block;"><div role=3D"radio" aria-c=
+hecked=3D"false" aria-label=3D"4" style=3D"border: solid 2px #9aa0a6; heigh=
+t: 16px; width: 16px; border-radius: 50%;"></div></div></td><td style=3D"ve=
+rtical-align: top;"><div style=3D"display: inline-block;"><div role=3D"radi=
+o" aria-checked=3D"false" aria-label=3D"5" style=3D"border: solid 2px #9aa0=
+a6; height: 16px; width: 16px; border-radius: 50%;"></div></div></td><td st=
+yle=3D"min-width: 100px; padding: 0 8px;">Too hard</td></tr></table></div><=
+/div></div><div style=3D"border: 1px solid #dadce0; padding: 20px 12px;back=
+ground-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-bottom: =
+12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"color: #20=
+2124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px; font-w=
+eight: 400; line-height: 24px;white-space: pre-wrap;margin: 0;">About how m=
+any MINUTES would you say you spent on this assignment?<span style=3D"color=
+: #d93025;" aria-label=3D"Required question"> *</span></h2><div style=3D"co=
+lor: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 12px=
+; font-weight: 400; letter-spacing: .25px; line-height: 16px;white-space: p=
+re-wrap;margin: 4px 0 20px;" dir=3D"auto">Just to set expectations for futu=
+re students.<br></div></div><div style=3D"padding: 0 12px;"><div style=3D"w=
+idth: 100%;"><div dir=3D"auto" style=3D"white-space: pre-wrap;border-bottom=
+: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;display:=
+ inline-block; max-width: 100%; min-width: 50%;">30</div></div></div></div>=
+</div><table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" style=3D"=
+max-width: 672px; min-width: 154px; border-collapse: separate; border-spaci=
+ng: 0 0.2em;" width=3D"100%" role=3D"presentation"><tbody><tr height=3D"24p=
+x"><td></td></tr><tr><td><a href=3D"https://docs.google.com/forms?usp=3Dmai=
+l_form_link" style=3D"color: #424242; font-size: 13px;">Create your own Goo=
+gle Form</a></td></tr><tr><td>Does this form look suspicious? <a href=3D"ht=
+tps://drive.google.com/u/0/abuse?id=3DAKkXjoz-tcIDV35ysIsZollIYb6IolUFG0dZT=
+bEv9_BuZSlZnzRCVBerv9KA2SHP2nlY-7PkYeDuRvzSUJjW6z4:0&amp;docurl=3Dhttps://d=
+ocs.google.com/forms/u/0/d/e/1FAIpQLSeVGJ6I0hSpb4NqzfbCC8o1IkezdTCw4fpHpMTL=
+X-eR4fsQeg/formResponse?pli%3D1&amp;usp=3Dmail_receipt_abuse" target=3D"_bl=
+ank" style=3D"color: #424242; font-size: 13px;">Report</a></td></tr></tbody=
+></table></div></body></html>
+--0000000000003d4c1c063ee20deb--
