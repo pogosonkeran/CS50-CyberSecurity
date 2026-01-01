@@ -21,7 +21,6 @@
 - Password managers (iCloud Keychain, Google, Bitwarden, 1Password)
 - Passkeys (public/private key pairs) — the future of logins
 
-- 
 ## Threats to Watch
 - Phishing & social engineering
 - SIM swapping (steals SMS codes)
