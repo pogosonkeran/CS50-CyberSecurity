@@ -1,4 +1,4 @@
-# CS50 Cybersecurity — Securing Accounts
+# CS50 Cybersecurity: Securing Accounts
 
 # Key Concepts
 - **Authentication vs Authorization**
