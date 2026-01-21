@@ -1,35 +1,42 @@
-Core Concepts
-- **Authentication vs Authorization**
-  1 Authentication = proving identity (username + password)
-  2 Authorization = what you’re allowed to access after you’re in
-- **Password Attacks**
-  1 Dictionary (wordlists), Brute force (all combos), Credential stuffing (reused leaked creds)
-- **Strength by Numbers**
-  1 4-digit PIN ≈ 10,000 combos → milliseconds to crack
-  2 4 letters ≈ ~7M combos → seconds
-  3 4 mixed chars (letters/digits/symbols) ≈ ~78M → minutes
-   **8 random mixed chars ≈ ~6 quadrillion** → practically infeasible
-- **NIST Guidance**
-  1 ≥ 8 characters minimum, allow long (up to 64), block common/compromised passwords
+Core Concepts:
+Authentication vs Authorization
+1 Authentication means proving who you are such as username and password
+2 Authorization means what you are allowed to access after logging in
 
-Defenses
-1 Long, unique passwords (length > complexity)
-2 **MFA/2FA** (prefer authenticator app over SMS)
-3 Rate-limiting / lockouts
-4 Password managers (iCloud Keychain, Google, Bitwarden, 1Password)
-5 Passkeys (public/private key pairs) — the future of logins
+Password Attacks:
+1 Dictionary attacks use common wordlists
+2 Brute force tries every possible combination
+3 Credential stuffing uses leaked usernames and passwords
 
-Threats to Watch
-1 Phishing & social engineering
-2 SIM swapping (steals SMS codes)
-3 Keylogging malware on untrusted devices
+Strength by Numbers:
+1 Four digit PIN has about 10000 combinations and can be cracked very fast
+2 Four letters has about 7 million combinations and takes seconds
+3 Four mixed characters has about 78 million combinations and takes minutes
+4 Eight random mixed characters has trillions of combinations and is not practical to crack
 
-Assignment Work (What I did)
-1 Simulated brute-forcing a 4-digit PIN; saw how fast short passwords fall
-2 Compared time/space growth from 10^4 → 52^4 → 94^4 and discussed 94^8 scale
-3 Wrote up takeaways on why **length + MFA** crush most attacks
+NIST Guidance:
+1 Minimum of 8 characters
+2 Allow long passwords up to 64 characters
+3 Block common or compromised passwords
 
-Takeaways
-1. Security = raise attacker cost until it’s not worth it.
-2. MFA makes stolen passwords mostly useless.
-3. Password managers solve the “I can’t remember long passwords” problem.
+Defenses:
+1 Use long and unique passwords
+2 Use MFA or 2FA preferably with an authenticator app
+3 Use rate limiting or account lockouts
+4 Use password managers
+5 Use passkeys based on public and private keys
+
+Threats to Watch:
+1 Phishing and social engineering
+2 SIM swapping to steal SMS codes
+3 Keylogging malware on unsafe devices
+
+Assignment Work:
+1 Tested brute forcing a four digit PIN and saw how fast it fails
+2 Compared password sizes and how attack time grows as length increases
+3 Wrote conclusions on why length plus MFA stops most attacks
+
+Takeaways:
+1 Security is about making attacks not worth the effort
+2 MFA makes stolen passwords far less useful
+3 Password managers remove the need to remember long passwords
